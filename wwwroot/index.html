@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly - Spotify Queue Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Jolly - Spotify Queue Manager</h1>
+            <p class="subtitle">Business music queue management system</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Customer View: Song Search and Request -->
+            <section id="customer-section" class="section">
+                <h2>Request a Song</h2>
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Search for songs, artists, or albums..."
+                        autocomplete="off"
+                    >
+                    <button id="search-btn" class="btn btn-primary">Search</button>
+                </div>
+                
+                <div class="name-input-container">
+                    <input 
+                        type="text" 
+                        id="requester-name" 
+                        placeholder="Your name"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div id="search-results" class="search-results"></div>
+            </section>
+
+            <!-- Business Owner View: Approval Panel -->
+            <section id="business-section" class="section">
+                <h2>Business Approval Panel</h2>
+                <div class="controls">
+                    <button id="refresh-btn" class="btn btn-secondary">Refresh Queue</button>
+                    <button id="toggle-view-btn" class="btn btn-secondary">Show All Requests</button>
+                </div>
+                
+                <div id="queue-container" class="queue-container">
+                    <div id="pending-requests" class="requests-list"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
