@@ -67,7 +67,7 @@ function displaySearchResults(songs) {
             <div class="song-artist">${escapeHtml(song.artist)}</div>
             <div class="song-album">${escapeHtml(song.album)}</div>
             <div class="song-duration">${formatDuration(song.durationMs)}</div>
-            <button class="btn btn-primary" onclick="requestSong('${song.id}', '${escapeHtml(song.title)}')">
+            <button class="btn btn-primary" data-song-id="${escapeHtml(song.id)}" data-song-title="${escapeHtml(song.title)}" onclick="requestSong(this.dataset.songId, this.dataset.songTitle)">
                 Request Song
             </button>
         </div>
